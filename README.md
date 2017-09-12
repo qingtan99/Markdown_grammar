@@ -16,6 +16,15 @@ This is an H1
 This is an H2
 -------------
 ```
+
+效果如下：  
+
+This is an H1
+=============
+
+This is an H2
+-------------
+
 任何数量的 = 和 - 都可以有效果。
 > 类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：
 ```
@@ -25,6 +34,16 @@ This is an H2
 
 ###### 这是 H6
 ```
+
+效果如下：  
+
+# 这是 H1
+
+## 这是 H2
+
+###### 这是 H6
+
+
 你也可以选择性的使用类Atx的“闭合”标题，这样只是为了美观，类似这样：
 
 ```
@@ -34,6 +53,15 @@ This is an H2
 
 ###### 这是 H6 ######
 ```
+
+效果如下：
+
+# 这是 H1 #
+
+## 这是 H2 ##
+
+###### 这是 H6 ######
+
 
 #### 区块引用 Blockquotes
 > 在Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 > ：
@@ -45,6 +73,17 @@ This is an H2
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 > id sem consectetuer libero luctus adipiscing.
 ```
+
+效果如下：
+
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+> 
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+> id sem consectetuer libero luctus adipiscing.
+
+
 > 只在首行添加
 ```
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
@@ -54,6 +93,17 @@ Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 id sem consectetuer libero luctus adipiscing.
 ```
+
+效果如下：
+
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
+
+
 > 区块引用可以嵌套（例如：引用内的引用）
 ```
 > This is the first level of quoting.
@@ -73,6 +123,25 @@ id sem consectetuer libero luctus adipiscing.
 > 
 >     return shell_exec("echo $input | $markdown_script");
 ```
+
+效果如下：
+
+> This is the first level of quoting.
+>
+> > This is nested blockquote.
+>
+> Back to the first level.
+```
+> 引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：
+```
+> ## 这是一个标题。
+> 
+> 1.   这是第一行列表项。
+> 2.   这是第二行列表项。
+> 
+> 给出一些例子代码：
+> 
+>     return shell_exec("echo $input | $markdown_script");
 
 #### 列表
 > Markdown 支持有序列表和无序列表。
@@ -157,6 +226,15 @@ I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
 [3]: http://search.msn.com/    "MSN Search"
 ```
 
+效果如下：
+
+内联方式：This is an [example link](http://example.com/)
+I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  
+
+[1]: http://google.com/        "Google" 
+[2]: http://search.yahoo.com/  "Yahoo Search" 
+[3]: http://search.msn.com/    "MSN Search"
+
 #### 图片
 > Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种方式： 行内式和参考式。
 ```
@@ -166,6 +244,14 @@ I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
 
 [id]: /path/to/img.jpg "Title"
 ```
+
+效果如下：
+
+行内式式：![alt text](/path/to/img.jpg "Title")
+参考式：
+![alt text][id] 
+
+[id]: /path/to/img.jpg "Title"
 
 #### 强调
 > Markdown 使用星号（*）和和底线（_）作为标记强调字词的符号，用两个包起来使用，是使字体加粗
@@ -178,6 +264,16 @@ _single underscores_
 
 __double underscores__
 ```
+
+效果如下：
+
+*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
 
 #### 代码
 ```
